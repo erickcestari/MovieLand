@@ -22,20 +22,18 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <><div className="app">
       <h1>MovieLand</h1>
-
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
       <div className="search">
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search for movies"
-        />
+          placeholder="Search for movies" />
         <img
           src={SearchIcon}
           alt="search"
-          onClick={() => searchMovies(searchTerm)}
-        />
+          onClick={() => searchMovies(searchTerm)} />
       </div>
 
       {movies?.length > 0 ? (
@@ -49,7 +47,7 @@ const App = () => {
           <h2>No movies found</h2>
         </div>
       )}
-    </div>
+    </div></>
   );
 };
 
